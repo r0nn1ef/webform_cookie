@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains webform_cookie.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function webform_cookie_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the webform_cookie module.
+    case 'help.page.webform_cookie':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Webform submission handler that sets an') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function webform_cookie_theme() {
+  return [
+    'webform_cookie' => [
+      'render element' => 'children',
+    ],
+  ];
+}

@@ -1,0 +1,5 @@
+name: 'Webform Cookie'
+type: module
+description: 'Webform submission handler that sets an'
+core: 8.x
+package: 'Webform'

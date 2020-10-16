@@ -1,0 +1,13 @@
+{
+    "name": "webform_cookie",
+    "type": "drupal-module",
+    "description": "Webform submission handler that sets an",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/webform_cookie",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/webform_cookie",
+        "source": "http://cgit.drupalcode.org/webform_cookie",
+    },
+}
