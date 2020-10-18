@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a summary of an example webform handler.
+ *
+ * Available variables:
+ * - settings: The current configuration for this handler:
+ *   - name: The name of the cookie to be set.
+ *   - value: The value of the cookie to be set.
+ *   - expires: The expiration date for the cookie.
+ *   - domain: The (sub)domain that the cookie is available to.
+ *   - secure: Indicates that the cookie should only be transmitted over a secure HTTPS connection from the client.
+ *   - http_only: When TRUE the cookie will be made accessible only through the HTTP protocol.
+ * - handler: The handler information, including:
+ *   - id: The handler plugin id.
+ *   - handler_id: The handler id.
+ *   - label: The handler label.
+ *   - description: The handler description.
+ *
+ * @ingroup themeable
+ */
+#}
+{% if settings.debug %}<b class="color-error">{{ 'Debugging is enabled'|t }}</b><br />{% endif %}
+<div>
+    <b>Cookie name:</b> {{ settings.name }}
+</div>
+<div>
+    <b>Cookie value:</b> {{ settings.value }}
+</div>
+<div>
+    <b>Cookie expires:</b> {{ settings.expires|format_date('short') }}
+</div>
+<div>
+    <b>Domain:</b> {{ settings.domain }}
+</div>
+<div>
+    <b>Secure:</b> {{ settings.secure ? 'Yes'|t : 'No'|t }}
+</div>
+<div>
+    <b>HTTP only:</b> {{ settings.http_only ? 'Yes'|t : 'No'|t }}
+</div>

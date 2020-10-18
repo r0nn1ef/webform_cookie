@@ -28,8 +28,8 @@ function webform_cookie_help($route_name, RouteMatchInterface $route_match) {
  */
 function webform_cookie_theme() {
   return [
-    'webform_cookie' => [
-      'render element' => 'children',
+    'webform_handler_cookie_summary' => [
+      'variables' => ['settings' => NULL, 'handler' => [] ],
     ],
   ];
 }
