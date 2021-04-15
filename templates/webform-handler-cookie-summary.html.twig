@@ -16,26 +16,46 @@
  *   - handler_id: The handler id.
  *   - label: The handler label.
  *   - description: The handler description.
+ * - name: The name of the cookie to be set.
+ * - value: The value of the cookie to be set.
+ * - expires: The expiration time for the cookie.
+ * - domain: The (sub)domain that the cookie is available to.
+ * - secure: Indicates that the cookie should only be transmitted over a secure HTTPS connection from the client.
+ * - http_only: When TRUE the cookie will be made accessible only through the HTTP protocol.
  *
  * @ingroup themeable
  */
 #}
+
 {% if settings.debug %}<b class="color-error">{{ 'Debugging is enabled'|t }}</b><br />{% endif %}
+
 <div>
-    <b>Cookie name:</b> {{ settings.name }}
+  {% trans %}
+    <b>Cookie name:</b> {{ name }}
+  {% endtrans %}
 </div>
 <div>
-    <b>Cookie value:</b> {{ settings.value }}
+  {% trans %}
+    <b>Cookie value:</b> {{ value }}
+  {% endtrans %}
 </div>
 <div>
-    <b>Cookie expires:</b> {{ settings.expires|format_date('short') }}
+  {% trans %}
+    <b>Cookie expiration:</b> {{ expires }}
+  {% endtrans %}
 </div>
 <div>
-    <b>Domain:</b> {{ settings.domain }}
+  {% trans %}
+    <b>Domain:</b> {{ domain }}
+  {% endtrans %}
 </div>
 <div>
-    <b>Secure:</b> {{ settings.secure ? 'Yes'|t : 'No'|t }}
+  {% trans %}
+    <b>Secure:</b> {{ secure }}
+  {% endtrans %}
 </div>
 <div>
-    <b>HTTP only:</b> {{ settings.http_only ? 'Yes'|t : 'No'|t }}
+  {% trans %}
+    <b>HTTP only:</b> {{ http_only }}
+  {% endtrans %}
 </div>

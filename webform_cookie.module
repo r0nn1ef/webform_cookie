@@ -29,7 +29,8 @@ function webform_cookie_help($route_name, RouteMatchInterface $route_match) {
 function webform_cookie_theme() {
   return [
     'webform_handler_cookie_summary' => [
-      'variables' => ['settings' => NULL, 'handler' => [] ],
+      'variables' => ['settings' => NULL, 'handler' => NULL ],
+      'file' => 'webform_cookie.theme.inc',
     ],
   ];
 }
