@@ -8,6 +8,6 @@
     "minimum-stability": "dev",
     "support": {
         "issues": "https://www.drupal.org/project/issues/webform_cookie",
-        "source": "http://cgit.drupalcode.org/webform_cookie",
-    },
+        "source": "http://cgit.drupalcode.org/webform_cookie"
+    }
 }
